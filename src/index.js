@@ -30,6 +30,11 @@ Object.keys(json).forEach(key => {
         return;
     }
 
+    if (typeof value === 'boolean') {
+        dataToWrite.push(`${key}: ${value}`)
+        return;
+    }
+
     if (typeof value === 'string') {
         dataToWrite.push(`${key}: "${value}"`)
         return;
