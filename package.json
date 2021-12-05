@@ -10,6 +10,8 @@
   "keywords": ["altv", "configuration"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Stuyk/altv-config.git"
-  }
+    "url": "git+https://github.com/stuyk/altv-config.git"
+  },
+  "private": false,
+  "license": "GNUv3"
 }
