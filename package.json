@@ -6,5 +6,10 @@
   "scripts": {
     "start": "node ./src/index.js"
   },
-  "author": "stuyk"
+  "author": "stuyk",
+  "keywords": ["altv", "configuration"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stuyk/altv-config.git"
+  }
 }
