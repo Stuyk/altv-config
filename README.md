@@ -65,5 +65,5 @@ Create a JSON configuration somewhere in your project. ie. `./configs/dev.json`
 Then use this package to generate the configuration dynamically.
 
 ```
-npx @stuyk/altv-config ./configs/dev.json
+npx altv-config ./configs/dev.json
 ```
