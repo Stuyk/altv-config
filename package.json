@@ -1,0 +1,10 @@
+{
+  "name": "@stuyk/altv-config",
+  "version": "1.0.0",
+  "description": "Dynamic configuration generator for altv based on json files",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "stuyk"
+}
