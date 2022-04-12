@@ -1,13 +1,16 @@
 {
   "name": "@stuyk/altv-config",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Dynamic configuration generator for altv based on json files",
   "main": "./src/index.js",
   "scripts": {
     "start": "node ./src/index.js"
   },
   "author": "stuyk",
-  "keywords": ["altv", "configuration"],
+  "keywords": [
+    "altv",
+    "configuration"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stuyk/altv-config.git"

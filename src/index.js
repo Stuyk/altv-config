@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const path = require('path');
 const args = process.argv.slice(2);
+let output = 'server.cfg';
 
 if (args.length <= 0) {
     console.error(new Error(`Failed to specify configuration file. Try 'npx altv-config someFolder/someFile.json'`))
@@ -9,6 +11,16 @@ if (args.length <= 0) {
 if (!fs.existsSync(args[0])) {
     console.error(new Error(`Could not find file at path: ${args[0]}`))
     process.exit(1);
+}
+
+// Read output path
+if (args[1]) {
+    if (!args[1].includes('.')) {
+        console.error(new Error(`Output path must have a file name and extension.`))
+        process.exit(1);
+    }
+
+    output = args[1];
 }
 
 const file = fs.readFileSync(args[0]).toString();
@@ -67,7 +79,7 @@ Object.keys(json).forEach(key => {
                 dataToWrite.push(`  ${valueKey}: "${resultValue}"`)
                 return;
             }
-        
+
             if (typeof resultValue === 'number') {
                 dataToWrite.push(`  ${valueKey}: ${resultValue}`)
                 return;
@@ -78,10 +90,12 @@ Object.keys(json).forEach(key => {
     }
 });
 
-if (fs.existsSync('server.cfg')) {
-    fs.unlinkSync('server.cfg');
+if (fs.existsSync(output)) {
+    fs.unlinkSync(output);
 }
 
-for(let i = 0; i < dataToWrite.length; i++) {
-    fs.appendFileSync('server.cfg', `${dataToWrite[i]}\r\n`);
+for (let i = 0; i < dataToWrite.length; i++) {
+    console.log(output);
+
+    fs.appendFileSync(path.normalize(output), `${dataToWrite[i]}\r\n`);
 }

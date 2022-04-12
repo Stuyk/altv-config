@@ -67,3 +67,9 @@ Then use this package to generate the configuration dynamically.
 ```
 npx altv-config ./configs/dev.json
 ```
+
+You can also specify a specific directory/file name for output.
+
+```
+npx altv-config ./configs/dev.json ./output/myConfig.cfg
+```
