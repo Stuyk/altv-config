@@ -95,7 +95,5 @@ if (fs.existsSync(output)) {
 }
 
 for (let i = 0; i < dataToWrite.length; i++) {
-    console.log(output);
-
     fs.appendFileSync(path.normalize(output), `${dataToWrite[i]}\r\n`);
 }
