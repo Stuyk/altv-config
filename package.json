@@ -1,6 +1,6 @@
 {
   "name": "@stuyk/altv-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Dynamic configuration generator for altv based on json files",
   "main": "./src/index.js",
   "scripts": {
@@ -19,5 +19,11 @@
   "license": "GNUv3",
   "bin": {
     "altv-config": "./src/index.js"
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "singleQuote": true,
+    "semi": true,
+    "printWidth": 120
   }
 }
