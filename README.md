@@ -1,6 +1,6 @@
 # altv-config
 
-What is this? It's a configuration generator that lets you throw in JSON files to generate a dynamic `server.cfg`.
+What is this? It's a configuration generator that lets you throw in JSON files to generate a dynamic `server.toml`.
 
 ## Why?
 
@@ -71,5 +71,5 @@ npx altv-config ./configs/dev.json
 You can also specify a specific directory/file name for output.
 
 ```
-npx altv-config ./configs/dev.json ./output/myConfig.cfg
+npx altv-config ./configs/dev.json ./output/myConfig.toml
 ```

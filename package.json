@@ -1,6 +1,6 @@
 {
   "name": "@stuyk/altv-config",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Dynamic configuration generator for altv based on json files",
   "main": "./src/index.js",
   "scripts": {
@@ -25,5 +25,8 @@
     "singleQuote": true,
     "semi": true,
     "printWidth": 120
+  },
+  "dependencies": {
+    "json2toml": "^4.0.0"
   }
 }

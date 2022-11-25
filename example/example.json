@@ -19,7 +19,7 @@
         "js-module"
     ],
     "resources": [
-        "webserver", 
+        "webserver",
         "core"
     ],
     "tags": [
@@ -51,6 +51,9 @@
         "global-fetch": true,
         "global-webcrypto": true,
         "network-imports": true,
-        "extra-cli-args": ["--inspect=127.0.0.1:9229", "--max-old-space-size=8192"]
+        "extra-cli-args": [
+            "--inspect=127.0.0.1:9229",
+            "--max-old-space-size=8192"
+        ]
     }
 }

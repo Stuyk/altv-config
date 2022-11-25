@@ -1,0 +1,37 @@
+announce = false
+announceRetryErrorAttempts = 50
+announceRetryErrorDelay = 10000
+debug = true
+description = "A Roleplay Framework for alt:V"
+gamemode = "Roleplay"
+host = "0.0.0.0"
+language = "en"
+migrationDistance = 150
+modules = ["js-module"]
+name = "Athena 3.0.0"
+players = 512
+port = 7788
+resources = ["webserver","core"]
+streamingDistance = 400
+tags = ["athena","framework","version","3"]
+timeout = 1
+useCdn = false
+useEarlyAuth = false
+website = "athenaframework.com"
+
+[js-module]
+  extra-cli-args = ["--inspect=127.0.0.1:9229","--max-old-space-size=8192"]
+  global-fetch = true
+  global-webcrypto = true
+  heap-profiler = true
+  network-imports = true
+  profiler = true
+  source-maps = true
+
+[js-module.inspector]
+  host = "127.0.0.1"
+  port = 9229
+
+[voice]
+  bitrate = 64000
+
