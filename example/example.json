@@ -15,19 +15,9 @@
     "timeout": 1,
     "announceRetryErrorDelay": 10000,
     "announceRetryErrorAttempts": 50,
-    "modules": [
-        "js-module"
-    ],
-    "resources": [
-        "webserver",
-        "core"
-    ],
-    "tags": [
-        "athena",
-        "framework",
-        "version",
-        "3"
-    ],
+    "modules": ["js-module"],
+    "resources": ["webserver", "core"],
+    "tags": ["athena", "framework", "version", "3"],
     "useEarlyAuth": false,
     "earlyAuthUrl": null,
     "useCdn": false,
@@ -51,9 +41,9 @@
         "global-fetch": true,
         "global-webcrypto": true,
         "network-imports": true,
-        "extra-cli-args": [
-            "--inspect=127.0.0.1:9229",
-            "--max-old-space-size=8192"
-        ]
+        "extra-cli-args": ["--inspect=127.0.0.1:9229", "--max-old-space-size=8192"]
+    },
+    "config.js-module-v2": {
+        "compatabilityEnabled": true
     }
 }

@@ -55,10 +55,13 @@ async function convert() {
 
     await removeNullObjects(json);
 
-    const result = json2toml(
+    let result = json2toml(
         json,
-        { indent: 2, newlineAfterSection: true }
+        { indent: 0, newlineAfterSection: true, }
     )
+
+    result = result.replace(/\["/gm, "[");
+    result = result.replace(/"\]/gm, "]");
 
     if (fs.existsSync(output)) {
         fs.unlinkSync(output);
